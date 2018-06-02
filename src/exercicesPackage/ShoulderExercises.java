@@ -29,17 +29,24 @@ public class ShoulderExercises extends JPanel{
 	private JLabel exe4L;
 	private JLabel[] labelImages;	// Array of all Labels that will contain an Image
 	
-	private String[] imageNames = {"Image/ImageTest1.png", "Image/ImageTest2.png",
-								   "Image/ImageTest3.png", "Image/ImageTest2.png"};
+	private String[] imageNames; 
 
 	/**
 	 * Constructor(default)
 	 */
 	public ShoulderExercises() {
 	
+		setImageNames();
 		initImage();
 		addImages();
-		setVisible(true);
+	}
+	
+	// Setters
+	
+	public void setImageNames() {
+		
+		imageNames = new String[] {"Image/ImageTest1.png", "Image/ImageTest2.png",
+				   "Image/ImageTest3.png", "Image/ImageTest2.png"};
 	}
 	
 	/**

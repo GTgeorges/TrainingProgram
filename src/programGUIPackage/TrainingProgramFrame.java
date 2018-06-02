@@ -53,7 +53,7 @@ public class TrainingProgramFrame extends JFrame {
 		trainingView = new TrainingProgramViewController();
 		setContentPane(trainingView);
 		// Setting a menuBar
-		trainingMenu = new TrainingMenu(trainingView);
+		trainingMenu = new TrainingMenu(this);
 		setJMenuBar(trainingMenu);
 	}
 	

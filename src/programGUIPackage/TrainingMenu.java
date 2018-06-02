@@ -29,16 +29,16 @@ public class TrainingMenu extends JMenuBar{
 	JButton b6;
 	JButton[] arrayButton;	// Array that contains all buttons
 	String[] muscleGroups;	// Array that contains all button's names
-	TrainingProgramViewController trainingView;
+	TrainingProgramFrame frame;
 	
 	/**
 	 * Constructor(default)
 	 */
-	public TrainingMenu(TrainingProgramViewController trainingView) {
+	public TrainingMenu(TrainingProgramFrame frame) {
 		
+		this.frame = frame;
 		initMenu();
 		initListener();
-		this.trainingView = trainingView;
 	}
 	
 	
@@ -104,8 +104,10 @@ public class TrainingMenu extends JMenuBar{
 				 */
 				public void actionPerformed(ActionEvent arg0) {
 					
-					//trainingView.setBackground(Color.ORANGE);
-					trainingView.add(new ShoulderExercises());
+					frame.getContentPane().removeAll();
+					frame.setContentPane(new ShoulderExercises());
+					//frame.revalidate();
+					frame.setVisible(true);
 				}
 			});
 		}
